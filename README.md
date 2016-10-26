@@ -1,9 +1,13 @@
 ﻿# android-presenter
-this is android presenter
+this is android presenter library
 
+[![LatestVersion](https://img.shields.io/badge/LatestVersion-1.0.0-brightgreen.svg?style=plastic) ](https://github.com/LiangMaYong/android-presenter/releases/tag)
 
-download jar : [android-presenter-src.jar](https://raw.githubusercontent.com/LiangMaYong/android-presenter/master/jar/android-presenter-src.jar)
-## use
+## Gradle
+```
+compile 'com.liangmayong.android:presenter:$LatestVersion'
+```
+## Getting started
 ```
 @BindP(...)
 

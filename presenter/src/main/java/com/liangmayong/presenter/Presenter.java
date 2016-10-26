@@ -54,7 +54,7 @@ public abstract class Presenter<V> {
      * @return callback
      */
     protected <D> Response1<D> response(D data) {
-        return new Response1<>(data);
+        return new Response1<D>(data);
     }
 
     /**

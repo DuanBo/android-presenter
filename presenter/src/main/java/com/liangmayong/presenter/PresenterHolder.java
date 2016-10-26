@@ -7,7 +7,6 @@ import java.util.Map;
  * Created by LiangMaYong on 2016/9/17.
  */
 public class PresenterHolder {
-    // presenterMap
     @SuppressWarnings("rawtypes")
     private Map<String, Presenter> persenterMap = new HashMap<String, Presenter>();
     // is attached
@@ -30,7 +29,7 @@ public class PresenterHolder {
      * @param presenter presenter
      */
     @SuppressWarnings("rawtypes")
-    protected void putPresenter(Presenter presenter) {
+    protected void addPresenter(Presenter presenter) {
         if (presenter == null) {
             return;
         }

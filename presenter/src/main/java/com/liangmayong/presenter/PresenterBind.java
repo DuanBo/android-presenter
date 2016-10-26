@@ -31,7 +31,7 @@ public class PresenterBind {
                     if (verifyPresenter(presenterType, object.getClass())) {
                         try {
                             Presenter pre = presenterType.getConstructor().newInstance();
-                            handler.putPresenter(pre);
+                            handler.addPresenter(pre);
                         } catch (Exception e) {
                         }
                     }
@@ -48,7 +48,7 @@ public class PresenterBind {
      * @param handler    holder
      * @param presenters presenters
      */
-    @SuppressWarnings({ "rawtypes", "unchecked" })
+    @SuppressWarnings({"rawtypes", "unchecked"})
     public static void bind(PresenterHolder handler, Class<? extends Presenter>... presenters) {
         if (handler == null || handler.getTarget() == null || presenters == null)
             return;
@@ -57,7 +57,7 @@ public class PresenterBind {
                 if (!handler.hasPresenter(presenterType)) {
                     try {
                         Presenter pre = presenterType.getConstructor().newInstance();
-                        handler.putPresenter(pre);
+                        handler.addPresenter(pre);
                         pre.onAttach(handler.getPersenters());
                     } catch (Exception e) {
                     }
